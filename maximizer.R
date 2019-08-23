@@ -22,10 +22,16 @@ while (n > 0) {
 }
 
 # Driver
-a <- compareNumbers(numbers[1], numbers[2])
-b <- compareNumbers(a, numbers[3])
-c <- compareNumbers(b, numbers[4])
-d <- compareNumbers(c, numbers[5])
-print(paste("The biggest among the other ", n," numbers is ", d))
+j <- 1
+highest <- 0
+while (n > 0) {
+  highest <- compareNumbers(numbers[j], numbers[j+1])
+  j = j + 1
+  print('it ran')
+  if (n == j) {
+    break
+  }
+}
+print(paste("The biggest among the other ", n," numbers is ", highest))
 
 # Program written by Carlo Miguel Dy
